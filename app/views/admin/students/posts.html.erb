@@ -1,0 +1,8 @@
+<%if @posts.any?%>
+<%@posts.each do |post|%>
+   <div>
+      <h2><%=post.title%></h2>
+    </div>
+<%end%>
+<h1><%=current_admin_user.role%></h1>
+<%end%>

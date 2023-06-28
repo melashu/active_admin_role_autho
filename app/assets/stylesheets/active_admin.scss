@@ -16,8 +16,21 @@
 //
 //   .status_tag { background: #6090DB; }
 
-$skinMainFirstColor: #558dfd!default;
-$skinMainSecondColor: #0066CC!default;
-$skinBorderWindowColor: #f57d1ae1!default;
+$skinMainFirstColor: #024d71 !default;
+$skinMainSecondColor: #168c40 !default;
+$menu-arrow-dark-icon-url: "active_admin/nested_menu_arrow_dark.gif" !default;
 
-@import 'wigu/active_admin_theme';
+@import "wigu/active_admin_theme";
+
+// Overriding any non-variable Sass must be done after the fact.
+// For example, to change the default status-tag color:
+//
+$pending-color: #FF9900;
+$rejected-color: #FF0000;
+$approved-color: #08A510;
+
+.status_tag {
+  &.pending { background: $pending-color; }
+  &.rejected { background: $rejected-color; }
+  &.approved { background: $approved-color; }
+}

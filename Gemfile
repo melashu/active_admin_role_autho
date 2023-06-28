@@ -18,6 +18,7 @@ gem 'activeadmin'
 gem 'devise'
 gem 'active_admin_role'
 gem 'active_admin_theme'
+# gem 'best_in_place'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"

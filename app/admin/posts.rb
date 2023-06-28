@@ -5,7 +5,7 @@ ActiveAdmin.register Post do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :title, :body
+  permit_params :title, :body, :student_id
   #
   # or
   #
@@ -14,5 +14,12 @@ ActiveAdmin.register Post do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+  form title: 'Add new Post' do |form|
+    form.input :title
+    form.input :body
+    form.input :student, as: :select, collection: Student.pluck(:first_name, :id)
+    actions
+  end
   
 end
